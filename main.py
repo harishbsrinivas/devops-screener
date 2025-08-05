@@ -49,7 +49,7 @@ def update_book(book_id: int, book: Book, session: SessionDep) -> Book:
     existing_book = session.get(Book, book_id)
     if not existing_book:
         raise HTTPException(status_code=404, detail="book not found")
-    for key, value in book.dict().items():
+    for key, value in book.model_dump().items():
         setattr(existing_book, key, value)
     session.commit()
     session.refresh(existing_book)

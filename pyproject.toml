@@ -1,0 +1,11 @@
+[project]
+name = "devops-screener"
+version = "0.1.0"
+description = "A simple FastAPI application for managing books."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "sqlmodel",
+    "uvicorn"
+]
