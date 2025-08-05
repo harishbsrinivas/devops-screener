@@ -17,14 +17,19 @@ This is a FastAPI-based microservice for managing an inventory of books. It conn
 
 - Python 3.8+
 - FastAPI
-- SQLAlchemy
 - Uvicorn
+- SqlModel
+- pytest
+- pytest-cov
 
 ## Setup
 
 1. Install dependencies:
    ```bash
-   uv install fastapi sqlmodel uvicorn sqlalchemy
+   uv init
+   uv venv
+   source .venv/bin/activate
+   uv pip install -r requirements.text
    ```
 
 
@@ -34,6 +39,8 @@ This is a FastAPI-based microservice for managing an inventory of books. It conn
    ```
 
 3. Access the API at `http://127.0.0.1:8000`.
+
+4. Access the API documentation at `http://127.0.0.1:8000/docs`.
 
 ## Endpoints
 
